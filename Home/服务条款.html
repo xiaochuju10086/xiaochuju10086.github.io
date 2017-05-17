@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>服务条款</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+    <!-- start of wrapper-->
+    <div class=" Wrapper Home-Wrapper relative">
+        <!-- start of top-->
+        <div class=" Top">
+<div class="left user-nav">
+    <ul class="signup-login">
+        
+        <li>
+            欢迎
+        </li>
+        <li><a href="javascript:ShowLogin();" id="href-login">
+            登录</a>
+            <form id="_form_login" action="/Member/Login" method="post">
+            <div class="signup-login-form" style="display: none;" id="login-form">
+            </div>
+            </form>
+        </li>
+        <li>| </li>
+        <li><a id="href-reg" href="javascript:ShowReg();">
+            注册</a>
+            <form id="_form_reg" action="/Member/Regist" method="post">
+            <div class="signup-login-form" style="display: none;" id="reg-form">
+                <ul class="signup-login-list">
+                    <li>
+                        <label>
+                            Email</label><input name="email" type="text" class="signup-login-list-input inputWidth" /></li>
+                    <li>
+                        <label>
+                            昵称</label><input name="nicename" type="text"
+                                class="signup-login-list-input inputWidth" /></li>
+                    <li>
+                        <label>
+                            密码</label><input name="pwd" type="password"
+                                class="signup-login-list-input inputWidth" /></li>
+                    <li>
+                        <label>
+                            验证码</label><input maxlength="4" type="text" name="code" style="width:50px;"
+                                class="signup-login-list-input inputWidth" onfocus="javascript:onFocus(this,'_form_reg');" />
+<img id="img" src="images/codecheck.aspx" />
+                        <a href="#" onclick="img.src='/Codecheck.aspx?t='+Math.random();">
+                            换一张</a> </li>
+                    <li>
+                        <label>
+                            &nbsp;</label><input type="checkbox" checked="checked" name="accept" class="left check-button"><p>
+                                我已阅读并接受
+                                <br />
+                                <a class="Blue" href="/Home/Service" target="_blank" class="agreement">EasyBug使用协议</a></p>
+                    </li>
+                    <li>
+                        <label>
+                            &nbsp;</label><a href="javascript:SubmitForm('_form_reg');" class="signup-login-button"><span>提交</span></a>
+                        <a href="javascript:ShowReg();" class="signup-login-button" style="margin-left: 8px;">
+                            <span>
+                                取消</span></a></li>
+                </ul>
+            </div>
+            </form>
+        </li>
+    </ul>
+</div>
+
+<form id="lan_form" action="/Home/SelectLanguage" method="post">
+<div class="right help-language">
+    <!--<span class="icon_biger"><a class="help-icon" href="http://www.uinicall.com/client/uinicall.php?room=10325&userid=13207&code=1"
+        target="_blank">
+        在线咨询
+    </a></span> --><span class="icon_big">
+        语言</span> <a href="javascript:SetLanguage('zh-CN')">
+            <img title='中文简体' src="images/cn.gif" />&nbsp;中</a>
+    <a href="javascript:SetLanguage('en-US')">
+        <img title='英文' src="images/gb.gif" />&nbsp;EN</a>
+    <input id="hidden_lan" type="hidden" value="zh-CN" name="lan" />
+    <input type="hidden" value="/Home/Service" name="addr" />
+</div>
+</form>
+
+        </div>
+        <!--end of top-->
+        <!-- start of user-project-->
+        <div class="user-project">
+            欢迎使用EasyBug
+        </div>
+        <!-- end of user-project-->
+        <!-- start of subheader-->
+        <div class="SubHeader relative">
+            <span class="logo"><a href="/">
+                <img title='最简单的Bug管理系统' src='images/logo.gif'
+                    class="icon_biger" /></a> </span>
+                
+            <ul class="HomeMenu">
+            
+               <li><a href="../Home/index.html" class="">
+                        首页</span></a></li>
+                <li><a href="../Home/产品说明.html">
+                        产品说明</span></a></li>                        
+                <li><a href="../Home/常见问题.html" class="">
+                        常见问题</span></a></li>                        
+                <li><a href="../Home/关于我们.html" class="">
+                        关于我们</span></a></li>
+            </ul>
+        </div>
+        <!-- end of subheader-->
+        <!-- start of content -->
+        
+    
+    <div class="Content about service">
+        <div class="Right">
+            <!-- start of NEGATIVE -->
+            <div class="Negative">
+                <img src="images/aboutus_info.jpg"/>
+            </div>
+            <!-- END of NEGATIVE -->
+            <!-- start of CHANNEL -->           
+<div class="slidebar">
+                   <div class="slidebar-top"></div>
+                  <div class="slidebar-info">
+                   <ul id="sideMenu">
+                        <li><a href="../Home/关于我们.html">关于我们</a></li>
+                       <li><a href="../Home/产品说明.html">产品说明</a></li>
+                       <li><a href="../Home/常见问题.html">常见问题</a></li>
+                       <li><a href="../Home/最新消息.html">EasyBug最新消息</a></li>
+                       <li><a href="../Home/行业资讯.html">行业资讯</a></li>
+                       <li><a href="../Home/法律声明.html">法律声明</a></li>
+                       <li  id="active"><a href="../Home/服务条款.html">服务条款</a></li>
+                       <li><a href="../Home/隐私声明.html">隐私声明</a></li>
+                       <li class="last"><a href="../Home/联系我们.html">联系我们</a>
+                   </ul>
+                                     
+                    <script type="text/javascript">
+                    var url=window.location.href;
+                    var k1=url.indexOf("/",8);
+                    suburl="";
+                    suburl=url.substring(k1+1);
+                   $("#sideMenu li a[href*="+suburl+"]").parent().addClass("active").siblings().removeClass("active");
+                  </script>
+                 </div>
+                   <div class="slidebar-bottom"></div>
+              	</div>
+            <div class="about-us">
+                <h2>
+                    服务条款</h2>
+                <p>
+                    <h5>EasyBug的权利和义务</h5>
+<ol>
+    <li>1.保证用户正常使用EasyBug服务，除非确实必须暂时停机或与Internet断开连接，但应及时通知用户。</li>
+    <li>2.不得无故破坏或干扰为用户提供的服务，并尽力为用户解决由于第三方人为操作出现的故障。</li>
+    <li>3.由于超出EasyBug预见能力或控制能力的突发事件或意外事件引起的宕机、线路中断，信息丢失情况，应在情况发生后的合理时间内与用户沟通并相互配合恢复正常运行。</li>
+    <li>4.EasyBug有权在服务器上复制保存用户的信息，为了用户的利益与用户联络。</li>
+    <li>5.EasyBug有权随时删除含有任何违反法律、法规，服务条款，各项规则的信息或链接，包括EasyBug对此有合理怀疑的信息。EasyBug有权单独对用户提供的信息是否属于上述范围做出判断。</li>
+    <li>6.如用户因违反本条款规定的任何条款，被EasyBug删除信息或停止提供服务，用户已支付的服务费用将不予退还。</li>
+</ol>
+<h5>用户的权利和义务</h5>
+<ol>
+    <li>1.用户应自行配备上网所需设备，包括电脑、调制解调器或其它必备上网装置，自行负担企业上网所需支付的与此服务有关的电话费用、网络费用。</li>
+    <li>2.不得使用本服务上载、传输或采用其它方式分发任何非法的、诽谤性的、侵扰他人的、侮辱性的、欺诈性的、猥亵的、包含病毒的或根据我公司的合理判断会在其它方面遭反对的任何内容。</li>
+    <li>3.不得上载、传输或采用其它方式分发侵犯其它一方的知识产权或者其它专有、契约或信用权利或义务的内容。</li>
+    <li>4.不得将这一服务用于任何欺诈或不当目的；未经他人同意而提取或以其它方式收集有关他人的信息，包括电子邮件地址。</li>
+    <li>5.不得下载任何由EasyBug的其它用户所传送的、但用户知道或应合理地知道不能以此方式合法传播的文件。</li>
+    <li>6.用户向EasyBug提交的注册信息均真实、准确、及时、详尽和完整，并不断更新注册资料，以符合及时、详尽准确的要求；不含有任何违反国家有关法律、法规及中华人民共和国承认或加入的国际条约的内容。</li>
+    <li>7.用户保证通过EasyBug的服务，所从事的一切活动都是合法、真实的，不侵害任何第三方的合法权益。如果用户在使用EasyBug进行活动时引起了法律后果，均由用户自行承担。如果EasyBug为此承担了相关责任，则用户同意赔偿EasyBug为此支出的费用和损失，包括合理的律师费。</li>
+    <li>8.用户应妥善保管好EasyBug的帐户及相关密码，如果造成帐号失密，由此给用户带来的损失，均由用户自己承担。</li>
+    <li>9.EasyBug仅就EasyBug.org的技术保障向用户承担责任，此责任最高额不超过用户就本条款项下的服务项目向EasyBug支付的费用。</li>
+</ol></p>
+            </div>
+            <!-- END of CHANNEL -->
+        </div>
+        <div class="clear">
+            <!-- -->
+        </div>
+    </div>
+
+        <!-- start of content -->
+        <div class="clear">
+            <!-- -->
+        </div>
+        <br />
+    </div>
+    <!-- end of wrapper-->
+    
+<div class="Footer">
+    <span class="left copyright">
+        版权所有
+        © 2010 <a href="../Home/index.html">easybug.org</a></span> <span class="left"><a href="../Home/法律声明.html" target="_blank">
+            法律声明</a> | <a href="../Home/服务条款.html" target="_blank">
+                服务条款</a> | <a href="../Home/隐私声明.html" target="_blank">
+                    隐私声明</a> | <a href="../Home/联系我们.html" target="_blank">
+                        联系我们</a> | 
+                        <a href="http://www.miibeian.gov.cn" target="_blank">粤ICP备14080320号</a> | 
+                        <a href="http://s.click.taobao.com/t?e=m%3D2%26s%3DeOybquKusTAcQipKwQzePCperVdZeJviEViQ0P1Vf2kguMN8XjClApM3k1lJX2BZSEph6ojmNraCpKsSYVJgWRymh6eYJ5kbVHEJJag4bfHN0hlvYc1pZOdn1BbglxZYxUhy8exlzcq9AmARIwX9K%2BnbtOD3UdznPV1H2z0iQv9NkKVMHClW0QbMqOpFMIvnvjQXzzpXdTHGJe8N%2FwNpGw%3D%3D" target="_blank">阿里云服务器</a>
+                        </span><span class="right">
+                        
+                        <a href="http://sighttp.qq.com/cgi-bin/check?sigkey=c31f5d664c1c41afe867cda8c2549066727ac65a490d8995cabbb1db885893b4"; target=_blank; onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=c31f5d664c1c41afe867cda8c2549066727ac65a490d8995cabbb1db885893b4';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" SRC='images/e2aa874f0f9b4d7aa2ae13efa8e07251.gif' alt="在线QQ咨询"></a>                    
+                            </span>
+</div>
+    </body>
+</html>
