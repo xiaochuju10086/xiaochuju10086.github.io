@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#adb{
+			width:500px;
+			height:500px;
+			/*background-color: yellow;*/
+		}
+	</style>
+</head>
+<body>
+<div id="adb">
+	这是一个div
+</div>
+<p>
+	等会要去面试  滴滴   ！！！！！！！！！
+</p>
+<script>
+
+    var a=document.getElementById('adb');
+
+    var myarr=new Array("red","blue","yellow","blue","black","green","pink");
+    var i=0;
+    function c() {
+       console.log(myarr[i]);
+       a.style.backgroundColor=(myarr[i]);
+        i++;
+        if(i>6){
+           return i=0;
+       };
+       return i;
+    };
+   setInterval("c()",50);
+</script>
+</body >
+</html>
